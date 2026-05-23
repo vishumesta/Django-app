@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "sun113/django-app"
+        IMAGE_NAME = "vishum07/django-app"
         IMAGE_TAG = "latest"
         CONTAINER = "django-container"
     }
