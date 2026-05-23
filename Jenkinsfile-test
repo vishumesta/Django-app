@@ -6,8 +6,8 @@ pipeline {
     
     
     environment {
-        // IMAGE_NAME = "sun113/microdegree"
-        IMAGE_NAME = "047719618727.dkr.ecr.us-east-1.amazonaws.com/django-cicd-demo"
+        // IMAGE_NAME = "vishum07/django-app"
+        IMAGE_NAME = "319315394953.dkr.ecr.ap-south-1.amazonaws.com/django-cicd-demo"
         IMAGE_TAG = "latest"
         CONTAINER_NAME = "microdegree-container"
         PORT = "8000"
@@ -39,8 +39,8 @@ pipeline {
         stage ("Login to ECR") {
             steps {
                 sh '''
-                    aws ecr get-login-password --region us-east-1 | \
-                    docker login --username AWS --password-stdin 047719618727.dkr.ecr.us-east-1.amazonaws.com
+                    aws ecr get-login-password --region ap-south-1 | \
+                    docker login --username AWS --password-stdin 319315394953.dkr.ecr.ap-south-1.amazonaws.com
                 '''
             }
         }
